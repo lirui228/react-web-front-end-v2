@@ -1,9 +1,8 @@
 .image-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  align-items: flex-start;
+  height: 90vh;
 }
 
 .image {
@@ -53,18 +52,18 @@
 
 .reset {
   margin-top: -5px;
-  margin-left: -400px;
+  margin-left: 0px;
 }
 
-button {
-  background-color: #eeeded;
-  border: 2px solid #8c8b8b;
-  color: #232323;
-  padding: 0px 5px;
-  font-size: 13px;
-  margin: 4px 2px;
-  margin-left: 0px;
+
+.button-reset {
+  font-size: 14px;
+  padding: 2px;
+  width: 50px;
+  border: #3151f1;
   border-radius: 4px;
+  background-color: #007bff;
+  color: #fbf6f6;
 }
 
 button:hover {

@@ -47,10 +47,10 @@ const MyNavbar = () => {
         </Nav.Link>
       </Nav>
       <Nav className="ms-auto">
-        <Button variant="outline-light" size="sm" className="me-2" href="login">
+        <Button variant="outline-light"  className="me-2" href="login">
           登录
         </Button>
-        <Button variant="outline-light" size="sm" href="register">
+        <Button variant="outline-light"  href="register">
           注册
         </Button>
       </Nav>

@@ -1,76 +1,67 @@
-.container {
+.galclass-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  margin-top: 60px;
+  margin-bottom: 50px;
 }
 
-.image-container {
-  margin-right: 50px;
+.galclass-left {
+  align-items: flex-end;
+  margin-right: 15px;
+
 }
 
-.image-container img {
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
-}
-
-.options-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.galclass-right {
   align-items: flex-start;
+  margin-left: 15px;
+  margin-top: -150px;
 }
 
-.option {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 30px;
-  margin: 5px;
-  padding: 0 10px;
-  border-radius: 15px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  justify-content: left;
+@media screen and (max-width: 768px) {
+  .galclass-container {
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  .galclass-left,
+  .galclass-right {
+    width: 100%;
+    margin: 0;
+  }
 }
 
-.option:hover .option-circle {
-  border-color: #007bff;
-}
-
-.option.selected .option-circle {
-  background-color: #007bff;
-  border-color: #007bff;
-}
-
-.option-circle {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  margin-right: 10px;
-  margin-top: 0;
-  border: 2px solid #000;
-}
-
-.submit-container {
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.submit-text {
-  margin-right: 10px;
-  font-size: 24px;
-}
-
-.submit-button {
-  padding: 10px 20px;
-  font-size: 24px;
-  background-color: #007bff;
-  color: #fff;
+.galclass-left__prev,
+.galclass-left__next {
+  top: 68%;
+  position: absolute;
+  z-index: 1;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  border-radius: 4px;
+  background-color: transparent;
+  width: 80px;
+  height: 50px;
+}
+
+
+.galclass-left__prev {
+  margin-left: 10px;
+  background-image: url("/array_next.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.galclass-left__next {
+  margin-left:380px;
+  background-image: url("/array_prev.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.galclass-left__prev:hover,
+.galclass-left__next:hover {
+  opacity: 1;
+  background-color: transparent;
 }

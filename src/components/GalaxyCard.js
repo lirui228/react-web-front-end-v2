@@ -28,7 +28,7 @@ const ImageCard = ({ imageUrl }) => {
         }}
       />
       <div className="labels">
-        <div className="label label-left">Brightness:</div>
+        <div className="label label-left">亮度</div>
         <div className="slider slider-left">
           <input
             type="range"
@@ -39,7 +39,7 @@ const ImageCard = ({ imageUrl }) => {
             onChange={handleBrightnessChange}
           />
         </div>
-        <div className="label label-right">Hue:</div>
+        <div className="label label-right">颜色</div>
         <div className="slider slider-right">
           <input
             type="range"
@@ -51,8 +51,8 @@ const ImageCard = ({ imageUrl }) => {
           />
         </div>
       </div>
-      <div className="reset">
-        <button onClick={handleReset}>Reset</button>
+      <div className="rest">
+        <button className='button-reset' onClick={handleReset}>Reset</button>
       </div>
     </div>
   );

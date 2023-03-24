@@ -54,18 +54,6 @@ input[type='text'], input[type='password'] {
   outline: none;
 }
 
-button[type='submit'] {
-  background-color: #5f5cf2;
-  color: #fff;
-  border-radius: 13px; /* 减少圆角 */
-  font-size: 1.1rem;
-  margin-top: 20px;
-  padding: 14px 35px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  width: 350px;
-  border: none;
-}
 
 button[type='submit']:hover {
   background-color: #646464;
