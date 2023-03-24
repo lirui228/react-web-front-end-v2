@@ -1,0 +1,47 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+/* 设置导航栏的高度和背景颜色 */
+.navbar {
+  height: 45px;
+  background-color: #000;
+}
+
+/* 设置 logo 离左边缘的距离 */
+.navbar-brand {
+  margin-left: 30px;
+}
+
+/* 设置导航链接的字体大小和间距 */
+.navbar-nav .nav-link {
+  font-size: 18px;
+  margin-right: 15px;
+}
+
+/* 修改激活状态下导航链接的样式 */
+.nav-link.active,
+.nav-link:focus {
+  box-shadow: none !important;
+  border-color: transparent; /*添加这一行去掉边框的颜色*/
+}
+
+/* 在激活状态下修改导航链接的样式 */
+.nav-link.active {
+  color: #fff;
+  background-color: #212020;
+  border-radius: 0;
+}
+ 
+/* 设置登录和注册按钮的样式 */
+#loginBtn,
+#signupBtn {
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 6px 22px;
+}
+
+/* 设置登录和注册按钮的字体大小 */
+#loginBtn.btn,
+#signupBtn.btn {
+  font-size: 13px;
+}
