@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import axios from "axios";
 import "./Login.css";
 
@@ -9,6 +10,8 @@ class Login extends Component {
       username: "",
       password: "",
       message: "",
+      //successMessage: "",
+      //failedMessage: "",
     };
   }
 
@@ -29,12 +32,19 @@ class Login extends Component {
         // Handle success response
         this.setState({
           message: response.data.message,
+          //message: "登录成功！",
         });
+        this.props.history.goBack(); // Redirect to the previous page
+        // Redirect to homepage
+        //window.location.href = "/";
       })
       .catch((error) => {
         // Handle error response
         this.setState({
           message: error.response.data.message,
+          //message: "登录失败！",
+          username: "",
+          password: "",
         });
       });
   };
@@ -92,4 +102,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default withRouter(Login);
