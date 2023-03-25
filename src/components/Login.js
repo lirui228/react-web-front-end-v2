@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import axios from "axios";
 import "./Login.css";
 
@@ -90,10 +90,11 @@ class Login extends Component {
 
           <div className="signup-container">
             <div className="signup-left">
-              没有账户？<a href="#">注册</a>
+              没有账户？<Link to="/register">注册</Link>
             </div>
             <div className="signup-right">
-              忘记密码？<a href="#">找回</a>
+              {/*忘记密码？<a href="#">找回</a>*/}
+              忘记密码？<Link to="/ForgotPassword">找回</Link>
             </div>
           </div>
         </form>
