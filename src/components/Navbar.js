@@ -1,28 +1,36 @@
-import React, { useState } from 'react';
-import { Navbar, Nav, Button } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './Navbar.css';
+import React, { useState } from "react";
+import { Navbar, Nav, Button } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./Navbar.css";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const MyNavbar = () => {
-  const [selectedNavItem, setSelectedNavItem] = useState('home');
+  const [selectedNavItem, setSelectedNavItem] = useState("home");
+  const [transparentBackground, setTransparentBackground] = useState(false);
 
   const handleNavItemClick = (event) => {
-    setSelectedNavItem(event.target.id);
+    const id = event.target.id;
+    setSelectedNavItem(id);
+    if (id === "") {
+      setTransparentBackground(true);
+    } else {
+      setTransparentBackground(false);
+    }
   };
 
   return (
-    <Navbar bg="dark" variant="dark" sticky="top">
-      <Navbar.Brand as={Link} to="/">
-        GaLaxy
-      </Navbar.Brand>
+    <Navbar
+      variant="dark"
+      className={transparentBackground ? "transparent-background" : ""}
+    >
+      <Navbar.Brand>GaLaxy</Navbar.Brand>
       <Nav className="me-auto">
         <Nav.Link
           as={Link}
           to="/"
           id="home"
-          className={selectedNavItem === 'home' ? 'active' : ''}
+          className={selectedNavItem === "home" ? "active" : ""}
           onClick={handleNavItemClick}
         >
           主页
@@ -31,7 +39,7 @@ const MyNavbar = () => {
           as={Link}
           to="/Galclass"
           id="galaxy"
-          className={selectedNavItem === 'galaxy' ? 'active' : ''}
+          className={selectedNavItem === "galaxy" ? "active" : ""}
           onClick={handleNavItemClick}
         >
           星系
@@ -40,17 +48,17 @@ const MyNavbar = () => {
           as={Link}
           to="/services"
           id="forum"
-          className={selectedNavItem === 'forum' ? 'active' : ''}
+          className={selectedNavItem === "forum" ? "active" : ""}
           onClick={handleNavItemClick}
         >
           论坛
         </Nav.Link>
       </Nav>
       <Nav className="ms-auto">
-        <Button variant="outline-light"  className="me-2" href="login">
+        <Button variant="outline-light" className="me-2" href="login">
           登录
         </Button>
-        <Button variant="outline-light"  href="register">
+        <Button variant="outline-light" href="register">
           注册
         </Button>
       </Nav>
@@ -59,4 +67,3 @@ const MyNavbar = () => {
 };
 
 export default MyNavbar;
-
