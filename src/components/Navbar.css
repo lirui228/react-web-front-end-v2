@@ -59,11 +59,10 @@
 .signupBtn {
   font-size: 13px;
   /*font-weight: bold;*/
-  text-transform: uppercase;
   align-items: center; /* 竖直居中 */
   width: 60px; /* 设置宽度为100px */
   height: 30px; /* 设置高度为30px */
-  border: 1px solid #fff; /* 设置边框为1px黑色实线 */
+  border: 1px solid #fff; 
 }
 
 .loginBtn {
@@ -73,3 +72,5 @@
 .signupBtn {
   margin-right: 40px;
 }
+
+
