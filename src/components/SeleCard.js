@@ -51,12 +51,12 @@ const SeleCard = () => {
       // Submit data here
       const formData = { answers: selectedOptions };
       console.log(formData); // Do whatever you want with the form data
-  
+
       // Delay the redirect by one second
       setTimeout(() => {
         // Redirect to the next page
         history.push("/next-page");
-  
+
         // Delay the redirect back to this page by one second
         setTimeout(() => {
           history.push("/galclass");
@@ -64,7 +64,7 @@ const SeleCard = () => {
       }, 50);
     }
   };
-  
+
   const handlePrevClick = () => {
     if (currentQuestion > 0) {
       setCurrentQuestion(currentQuestion - 1);
@@ -74,7 +74,9 @@ const SeleCard = () => {
   return (
     <div className="sele-card">
       <div className="question-section">
-        <div className="question-text">{questions[currentQuestion].question}</div>
+        <div className="question-text">
+          {questions[currentQuestion].question}
+        </div>
       </div>
       <div className="answer-section">
         {questions[currentQuestion].options.map((option) => (
@@ -90,7 +92,11 @@ const SeleCard = () => {
         ))}
       </div>
       <div className="button-section">
-        <button className="button-step" onClick={handlePrevClick} disabled={currentQuestion === 0}>
+        <button
+          className="button-step"
+          onClick={handlePrevClick}
+          disabled={currentQuestion === 0}
+        >
           上一步
         </button>
         <button className="button-step" onClick={handleNextClick}>

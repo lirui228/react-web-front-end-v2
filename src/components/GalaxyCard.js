@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './GalaxyCard.css';
+import React, { useState } from "react";
+import "./GalaxyCard.css";
 
 const ImageCard = ({ imageUrl }) => {
   const [brightness, setBrightness] = useState(100);
@@ -34,7 +34,7 @@ const ImageCard = ({ imageUrl }) => {
             type="range"
             id="brightness"
             min="0"
-            max="200"
+            max="360"
             value={brightness}
             onChange={handleBrightnessChange}
           />
@@ -45,14 +45,16 @@ const ImageCard = ({ imageUrl }) => {
             type="range"
             id="hue"
             min="0"
-            max="360"
+            max="180"
             value={hue}
             onChange={handleHueChange}
           />
         </div>
       </div>
       <div className="rest">
-        <button className='button-reset' onClick={handleReset}>Reset</button>
+        <button className="button-reset" onClick={handleReset}>
+          Reset
+        </button>
       </div>
     </div>
   );
